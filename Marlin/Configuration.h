@@ -271,8 +271,8 @@
 
 // Bed temperature must be close to target for this long before M190 returns success
 #define TEMP_BED_RESIDENCY_TIME 0   // (seconds)
-#define TEMP_BED_HYSTERESIS 10       // (degC) range of +/- temperatures considered "close" to the target one
-#define TEMP_BED_WINDOW     5      // (degC) Window around target to start the residency timer x degC early.
+#define TEMP_BED_HYSTERESIS 20       // (degC) range of +/- temperatures considered "close" to the target one
+#define TEMP_BED_WINDOW     8      // (degC) Window around target to start the residency timer x degC early.
 
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken.
@@ -370,9 +370,9 @@
  //  bias: 121 d: 121 min: 38.13 max: 40.53 Ku: 128.05 Tu: 41.09
  //   Classic PID
  //   Kp: 76.83 Ki: 3.74 Kd: 394.63
- #define  DEFAULT_bedKp 76.83
- #define  DEFAULT_bedKi 3.74
- #define  DEFAULT_bedKd 394.63
+ #define  DEFAULT_bedKp 69.71*0.55
+ #define  DEFAULT_bedKi 6.22
+ #define  DEFAULT_bedKd 548*8/3
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
@@ -446,7 +446,7 @@
   #define DELTA_SMOOTH_ROD_OFFSET 151.0 // mm
 
   // Horizontal offset of the universal joints on the end effector.
-  #define DELTA_EFFECTOR_OFFSET 31.0 // mm
+  #define DELTA_EFFECTOR_OFFSET 30 // mm
 
   // Horizontal offset of the universal joints on the carriages.
   #define DELTA_CARRIAGE_OFFSET 20.6 // mm
@@ -975,7 +975,7 @@
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
 //#define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 350. // Distance between the nozzle to printbed after homing
+#define MANUAL_Z_HOME_POS 332.8 // Distance between the nozzle to printbed after homing
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
 //
