@@ -443,7 +443,8 @@
   #define DELTA_DIAGONAL_ROD 217.0 // mm
 
   // Horizontal offset from middle of printer to smooth rod center.
-  #define DELTA_SMOOTH_ROD_OFFSET 151.0 // mm
+  // correcting flatness: increasing lowers hotend
+  #define DELTA_SMOOTH_ROD_OFFSET 153.0 // mm
 
   // Horizontal offset of the universal joints on the end effector.
   #define DELTA_EFFECTOR_OFFSET 30 // mm
@@ -830,7 +831,7 @@
 #define Y_MAX_POS DELTA_PRINTABLE_RADIUS
 #define Z_MAX_POS MANUAL_Z_HOME_POS
 
-//===========================================================================
+/5=5=========================================================================
 //========================= Filament Runout Sensor ==========================
 //===========================================================================
 //#define FILAMENT_RUNOUT_SENSOR // Uncomment for defining a filament runout sensor such as a mechanical or opto endstop to check the existence of filament
@@ -975,7 +976,7 @@
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
 //#define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 336.8 // Distance between the nozzle to printbed after homing
+#define MANUAL_Z_HOME_POS 335.5 // Distance between the nozzle to printbed after homing
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
 //
